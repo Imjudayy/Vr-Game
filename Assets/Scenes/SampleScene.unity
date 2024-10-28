@@ -21485,7 +21485,7 @@ MonoBehaviour:
   MistPrefab: {fileID: 1416619504515729692, guid: 832e4521d6a52d241a13ab3338730792,
     type: 3}
   barrelPos: {fileID: 1499099377}
-  SpraySfx: {fileID: 8300000, guid: 074fdaa9b2520dd4c8e11d0807aca73d, type: 3}
+  SpraySfx: {fileID: 8300000, guid: dd98f0012bc3fce4386213dd7639bb3b, type: 3}
   SprayFx: {fileID: 1499099378}
 --- !u!82 &1824745434
 AudioSource:
