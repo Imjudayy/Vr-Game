@@ -13841,6 +13841,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3296366413874168102, guid: 2dfc0c74c899c894c8f6c3ef22153e04,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5079933234856006384, guid: 2dfc0c74c899c894c8f6c3ef22153e04,
         type: 3}
       propertyPath: m_Name
@@ -14037,7 +14042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.488403, y: 0}
+  m_AnchoredPosition: {x: 9, y: 0}
   m_SizeDelta: {x: 268.9768, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200801839
@@ -14094,7 +14099,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14817,13 +14822,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499099376}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.276, y: 2.055, z: -1.56}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000104308114}
+  m_LocalPosition: {x: 0.321, y: 2.055, z: -1.42}
   m_LocalScale: {x: -0.02, y: -0.02, z: -0.02}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1824745430}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!198 &1499099378
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -14959,9 +14964,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 2
-      minScalar: 0
+      minMaxState: 0
+      scalar: 8
+      minScalar: 7.48
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15077,9 +15082,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 5
-      minScalar: 1
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15130,7 +15135,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 5
       minScalar: 1
       maxCurve:
@@ -15183,7 +15188,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 5
       minScalar: 1
       maxCurve:
@@ -15237,7 +15242,7 @@ ParticleSystem:
     startRotationX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.08726646
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -15290,7 +15295,7 @@ ParticleSystem:
     startRotationY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.08726646
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -15343,7 +15348,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.08726646
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -15397,7 +15402,7 @@ ParticleSystem:
     gravitySource: 0
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
-    size3D: 1
+    size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -15462,7 +15467,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 180, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -21482,7 +21487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197dc29ec572abb41aa20c0b0d7fb5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MistPrefab: {fileID: 1416619504515729692, guid: 832e4521d6a52d241a13ab3338730792,
+  MistPrefab: {fileID: 9000841935687713844, guid: 624d9e422647bf74f8f239a2ede82095,
     type: 3}
   barrelPos: {fileID: 1499099377}
   SpraySfx: {fileID: 8300000, guid: dd98f0012bc3fce4386213dd7639bb3b, type: 3}
@@ -21701,8 +21706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -3.8875122, y: -6.179291}
+  m_SizeDelta: {x: 28.1735, y: 23.8354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839170615
 MonoBehaviour:

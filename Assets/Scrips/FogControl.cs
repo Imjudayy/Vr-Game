@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FogControl : MonoBehaviour
 {
-    public float spped = 10f;
-    public float lifeTime = 5f;
+    public float spped = 40f;
+    public float lifeTime = 1.2f;
 
     private SocreManager _scoreManager;
 
