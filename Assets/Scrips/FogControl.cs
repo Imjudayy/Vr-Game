@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FogControl : MonoBehaviour
 {
-    public float spped = 40f;
-    public float lifeTime = 1.2f;
+    public float spped = 1f;
+    public float lifeTime = 0.1f;
 
-    private SocreManager _scoreManager;
+    private MouseScoreMangers _scoreManager;
 
     // Start is called before the first frame update
     void Start()
     {
 
         Rigidbody rb = GetComponent<Rigidbody>();
-        _scoreManager = FindObjectOfType<SocreManager>();
+        _scoreManager = FindObjectOfType<MouseScoreMangers>();
         rb.velocity = transform.forward * spped;
 
         Destroy(gameObject, lifeTime);

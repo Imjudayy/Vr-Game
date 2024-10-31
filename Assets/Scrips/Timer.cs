@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] GameObject gameOverUI;
     [SerializeField] float remainingTime;
     private bool isGameOver = false;
+    public bool isPlayerWin = false; // สถานะชัยชนะของผู้เล่น
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (isGameOver) return; // ถ้าเกมจบแล้วจะไม่อัปเดตเวลาอีก
+        if (isGameOver || isPlayerWin) return; // ถ้าเกมจบหรือผู้เล่นชนะ จะไม่อัปเดตเวลาอีก
 
         if (remainingTime > 0)
         {
@@ -42,11 +43,11 @@ public class Timer : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    // ใช้ฟังก์ชันนี้เพื่อเริ่มใหม่หรือรีเซ็ตเกมได้
     public void RestartGame()
     {
         Time.timeScale = 1; // คืนค่าเวลาปกติ
         isGameOver = false; // รีเซ็ตสถานะเกม
+        isPlayerWin = false; // รีเซ็ตสถานะผู้เล่นชนะ
         remainingTime = 60; // หรือกำหนดเวลาเริ่มต้นใหม่
         if (gameOverUI != null)
             gameOverUI.SetActive(false); // ซ่อน UI เกมจบ
