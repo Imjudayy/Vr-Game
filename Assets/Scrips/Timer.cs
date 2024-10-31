@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -43,13 +44,5 @@ public class Timer : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public void RestartGame()
-    {
-        Time.timeScale = 1; // คืนค่าเวลาปกติ
-        isGameOver = false; // รีเซ็ตสถานะเกม
-        isPlayerWin = false; // รีเซ็ตสถานะผู้เล่นชนะ
-        remainingTime = 60; // หรือกำหนดเวลาเริ่มต้นใหม่
-        if (gameOverUI != null)
-            gameOverUI.SetActive(false); // ซ่อน UI เกมจบ
-    }
+   
 }

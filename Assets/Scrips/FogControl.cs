@@ -33,8 +33,8 @@ public class FogControl : MonoBehaviour
     {
         if (other.collider.CompareTag("Target"))
         {
-            _scoreManager.score += 1;
-            Destroy(other.gameObject, 0.2f);
+            _scoreManager.score += 1 ;
+            Destroy(other.gameObject, 0.1f);
             Destroy(gameObject);
         }
     }

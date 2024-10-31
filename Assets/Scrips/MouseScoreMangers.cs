@@ -10,7 +10,7 @@ public class MouseScoreMangers : MonoBehaviour
 
     public int amount;
     public int score;
-    public Timer timer;  // อ้างอิงถึง Timer
+    public Timer timer;  
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +23,12 @@ public class MouseScoreMangers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MouseScoreText.text = $"Mouse = {score} / {amount}";
+        MouseScoreText.text = $"{score} / {amount}";
 
         if (score >= amount)
         {
             restartPanel.SetActive(true);
-            timer.isPlayerWin = true;  // หยุดการนับเวลาถอยหลัง
+            timer.isPlayerWin = true;  
         }
     }
 }
