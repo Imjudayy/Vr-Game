@@ -11357,7 +11357,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -17574,7 +17574,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939752526}
         m_TargetAssemblyTypeName: FlameGunControls, Assembly-CSharp
-        m_MethodName: Shoot
+        m_MethodName: OnActivate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17586,7 +17586,19 @@ MonoBehaviour:
         m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939752526}
+        m_TargetAssemblyTypeName: FlameGunControls, Assembly-CSharp
+        m_MethodName: OnDeactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -17738,6 +17750,8 @@ MonoBehaviour:
   barrelPos: {fileID: 833291446}
   FireSfx: {fileID: 0}
   FireFx: {fileID: 833291447}
+  fireInterval: 0.1
+  currentFire: {fileID: 0}
 --- !u!1 &961920776
 GameObject:
   m_ObjectHideFlags: 0
