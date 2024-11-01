@@ -2,23 +2,67 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] GameObject gameOverUI;
-    [SerializeField] float remainingTime;
-    private bool isGameOver = false;
+    /* [SerializeField] TextMeshProUGUI timerText;
+     [SerializeField] GameObject gameOverUI;
+     [SerializeField] float remainingTime;
+     private bool isGameOver = false;
+     public bool isPlayerWin = false; 
 
-    private void Start()
+     private void Start()
+     {
+         if (gameOverUI != null)
+             gameOverUI.SetActive(false);
+     }
+
+     private void Update()
+     {
+         if (isGameOver || isPlayerWin) return; 
+
+         if (remainingTime > 0)
+         {
+             remainingTime -= Time.deltaTime;
+         }
+         else
+         {
+             remainingTime = 0;
+             timerText.color = Color.red;
+
+             if (gameOverUI != null)
+                 gameOverUI.SetActive(true);
+
+             Time.timeScale = 0; 
+             isGameOver = true; 
+         }
+
+         int minutes = Mathf.FloorToInt(remainingTime / 60);
+         int seconds = Mathf.FloorToInt(remainingTime % 60);
+
+         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+     }*/
+
+
+
+    //New
+
+    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] public GameObject gameOverUI;
+    [SerializeField] public float remainingTime = 60; // กำหนดค่าเริ่มต้น
+    public bool isGameOver = false;
+    public bool isPlayerWin = false;
+
+     void Start()
     {
         if (gameOverUI != null)
             gameOverUI.SetActive(false);
     }
 
-    private void Update()
+    void Update()
     {
-        if (isGameOver) return; // ถ้าเกมจบแล้วจะไม่อัปเดตเวลาอีก
+        if (isGameOver || isPlayerWin) return; // ถ้าเกมจบหรือผู้เล่นชนะ จะไม่อัปเดตต่อ
 
         if (remainingTime > 0)
         {
@@ -42,13 +86,4 @@ public class Timer : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    // ใช้ฟังก์ชันนี้เพื่อเริ่มใหม่หรือรีเซ็ตเกมได้
-    public void RestartGame()
-    {
-        Time.timeScale = 1; // คืนค่าเวลาปกติ
-        isGameOver = false; // รีเซ็ตสถานะเกม
-        remainingTime = 60; // หรือกำหนดเวลาเริ่มต้นใหม่
-        if (gameOverUI != null)
-            gameOverUI.SetActive(false); // ซ่อน UI เกมจบ
-    }
 }
