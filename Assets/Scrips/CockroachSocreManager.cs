@@ -42,7 +42,7 @@ public class CockroachSocreManager : MonoBehaviour
     void Start()
     {
         score = 0;
-        amount = 1;
+        amount = 6;
     }
 
     void Update()

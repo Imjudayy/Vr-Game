@@ -49,7 +49,7 @@ public class MouseScoreMangers : MonoBehaviour
     void Start()
     {
         score = 0;
-        amount = 5;
+        amount = 12;
         restartPanel.SetActive(false);
     }
 
