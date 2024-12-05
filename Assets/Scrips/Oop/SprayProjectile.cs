@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SprayProjectile : Projectile
 {
-  /*  public override void Start()
+   /* public override void Start()
     {
         speed = 1f;  // ความเร็วของกระสุน Spray
         base.Start();
@@ -14,9 +14,9 @@ public class SprayProjectile : Projectile
     {
         base.OnCollisionEnter(other);
         // เพิ่มคะแนนสำหรับการชนกับเป้าหมายของ Spray (Mouse หรือ Cockroach)
-    }
+    }*/
 
-*/
+
 
 
    
@@ -33,8 +33,6 @@ public class SprayProjectile : Projectile
             base.OnCollisionEnter(other);
             // เพิ่มคะแนนสำหรับการชนกับเป้าหมายของ Spray (Mouse หรือ Cockroach)
         }
-    }
+    
 
-
-
-
+}

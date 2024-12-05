@@ -8,6 +8,14 @@ public class MouseScoreManager : ScoreManager
     public Timer timer;
     public CockroachScoreManager cockroachScoreManager;
 
+
+
+    protected override void Start()
+    {
+        base.Start();
+        amount = 12; // เป้าหมายคะแนนของหนู
+    }
+
     protected override void Update()
     {
         base.Update();
