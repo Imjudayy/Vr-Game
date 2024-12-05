@@ -15,7 +15,7 @@ public abstract class Weapon : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    // Abstract Method สำหรับการยิง
+    // Abstract Method
     public abstract void Shoot();
 
     protected void PlaySound()

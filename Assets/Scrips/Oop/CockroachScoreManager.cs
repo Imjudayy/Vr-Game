@@ -7,7 +7,7 @@ public class CockroachScoreManager : ScoreManager
     protected override void Start()
     {
         base.Start();
-        amount = 6; // เป้าหมายคะแนนของแมลงสาบ
+        amount = 6; 
     }
 
     protected override void Update()

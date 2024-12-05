@@ -6,34 +6,34 @@ using UnityEngine;
 
 public class OFlameGunControls : Weapon
 {
-    public GameObject firePrefab; // GameObject ที่เป็นกระสุนของปืนไฟ
-    public float fireInterval = 0.2f; // ระยะเวลาในการยิงครั้งถัดไป
+    public GameObject firePrefab;
+    public float fireInterval = 0.2f; 
     private float fireTimer;
 
     private bool isShooting;
 
     private void Update()
     {
-        // เช็คการยิงทุกครั้งที่ fireTimer ถึง 0
+        
         if (isShooting && fireTimer <= 0)
         {
             Shoot();
-            fireTimer = fireInterval; // รีเซ็ตเวลา
+            fireTimer = fireInterval; 
         }
 
-        fireTimer -= Time.deltaTime; // ลดเวลา fireTimer ลงทุกเฟรม
+        fireTimer -= Time.deltaTime; 
     }
 
     public override void Shoot()
     {
-        // สร้างกระสุนใหม่จาก firePrefab
+        
         GameObject projectile = Instantiate(firePrefab, barrelPos.position, barrelPos.rotation);
 
-        // กำหนดความเร็วของกระสุน (ในกรณีนี้ใช้ความเร็วที่สูงขึ้น)
+        
         FlameProjectile flameProjectile = projectile.GetComponent<FlameProjectile>();
-        flameProjectile.speed = 3f;  // ความเร็วที่ต้องการสำหรับปืนไฟ
+        flameProjectile.speed = 3f;  
 
-        // เล่นเสียงและเอฟเฟ็กต์
+        
         PlaySound();
         PlayEffect();
 
@@ -42,14 +42,14 @@ public class OFlameGunControls : Weapon
 
     public void OnActivate()
     {
-        // เริ่มการยิงเมื่อปืนถูกเปิดใช้งาน
+        
         fireFx.Play();
         isShooting = true;
     }
 
     public void OnDeactivate()
     {
-        // หยุดการยิงเมื่อปืนถูกปิด
+        
         fireFx.Stop();
         isShooting = false;
     }

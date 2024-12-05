@@ -13,7 +13,7 @@ public class MouseScoreManager : ScoreManager
     protected override void Start()
     {
         base.Start();
-        amount = 12; // เป้าหมายคะแนนของหนู
+        amount = 12; 
     }
 
     protected override void Update()
