@@ -4,25 +4,40 @@ using UnityEngine;
 
 public abstract class Projectile : MonoBehaviour
 {
- 
-
+    private float speed;
+    private float lifeTime = 0.1f;
 
    
-        public float speed;
-        public float lifeTime = 0.1f;
-
-        
-        protected virtual void Start()
+    public float Speed
+    {
+        get => speed;
+        set
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.velocity = transform.forward * speed;
-
-            Destroy(gameObject, lifeTime);
-        }
-
-        protected virtual void OnCollisionEnter(Collision other)
-        {
-            
+            if (value > 0) 
+                speed = value;
         }
     }
 
+    public float LifeTime
+    {
+        get => lifeTime;
+        set
+        {
+            if (value > 0)
+                lifeTime = value;
+        }
+    }
+
+    protected virtual void Start()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = transform.forward * Speed;
+
+        Destroy(gameObject, LifeTime);
+    }
+
+    protected virtual void OnCollisionEnter(Collision other)
+    {
+        
+    }
+}

@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class SprayProjectile : Projectile
 {
-   
+    protected override void Start()
+    {
+        Speed = 1f;  
+        LifeTime = 0.2f; 
+        base.Start();
+    }
+
+    protected override void OnCollisionEnter(Collision other)
+    {
+        base.OnCollisionEnter(other);
         
-        protected override void Start()
-        {
-            speed = 1f;  
-            base.Start();  
-        }
-
-        protected override void OnCollisionEnter(Collision other)
-        {
-            base.OnCollisionEnter(other);
-            
-        }
-    
-
+    }
 }

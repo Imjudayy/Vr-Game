@@ -31,7 +31,7 @@ public class OFlameGunControls : Weapon
 
         
         FlameProjectile flameProjectile = projectile.GetComponent<FlameProjectile>();
-        flameProjectile.speed = 3f;  
+        flameProjectile.Speed = 3f;  
 
         
         PlaySound();

@@ -12,7 +12,7 @@ public class OSprayControl : Weapon
     {
         GameObject projectile = Instantiate(mistPrefab, barrelPos.position, barrelPos.rotation);
         SprayProjectile sprayProjectile = projectile.GetComponent<SprayProjectile>();
-        sprayProjectile.speed = 1f; 
+        sprayProjectile.Speed = 1f; 
         PlaySound();
         PlayEffect();
         print("Spray Shot!");
